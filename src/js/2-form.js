@@ -23,10 +23,12 @@ form.addEventListener('submit', function (e) {
     e.preventDefault();
     if (!formdata.email || !formdata.message) {
         alert("Fill please all fields!")
-    }
-    console.log(formdata);
+    } else {
+        console.log(formdata);
     formdata.email = "";
     formdata.message = "";
     localStorage.removeItem(storageKey)
     form.reset();
+    }
+    
 })
